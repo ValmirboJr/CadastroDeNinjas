@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 @Table(name = "tb_Ninja")
 public class Ninja {
 
+
     String nome;
     String email;
     int idade;
