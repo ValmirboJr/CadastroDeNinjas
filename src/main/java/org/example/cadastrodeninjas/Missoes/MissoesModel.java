@@ -1,6 +1,9 @@
 package org.example.cadastrodeninjas.Missoes;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.example.cadastrodeninjas.Ninjas.controller.model.NinjaModel;
 
 import java.util.Date;
@@ -8,6 +11,9 @@ import java.util.List;
 
 @Entity
 @Table(name = "tb_Missao")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class MissoesModel {
 
     @Id
@@ -19,7 +25,7 @@ public class MissoesModel {
     private Date dataMissao;
     private String Dificuldade;
 
-    @OneToMany
+    @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> Ninjas;
     private boolean habilitado;
 
