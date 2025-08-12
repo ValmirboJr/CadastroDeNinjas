@@ -1,4 +1,4 @@
-package org.example.cadastrodeninjas.Ninjas.controller.controller;
+package org.example.cadastrodeninjas.Ninjas.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

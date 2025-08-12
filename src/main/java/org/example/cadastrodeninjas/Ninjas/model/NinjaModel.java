@@ -1,4 +1,4 @@
-package org.example.cadastrodeninjas.Ninjas.controller.model;
+package org.example.cadastrodeninjas.Ninjas.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,12 +16,15 @@ import java.util.List;
 public class NinjaModel {
 
     private String nome;
+
+    @Column(unique = true, nullable = false)
     private String email;
+    @Column(nullable = false)
     private int idade;
 
     @ManyToOne
     @JoinColumn(name = "missoes_id")
-    private List<MissoesModel> missoes;
+    private MissoesModel missoes;
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
