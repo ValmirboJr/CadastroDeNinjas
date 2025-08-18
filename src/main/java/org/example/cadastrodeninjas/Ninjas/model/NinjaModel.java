@@ -4,12 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.cadastrodeninjas.Missoes.MissoesModel;
-
-import java.util.List;
+import org.example.cadastrodeninjas.Missoes.model.MissoesModel;
 
 @Entity
-@Table(name = "tb_Ninja")
+@Table(name = "tb_cadastro")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
