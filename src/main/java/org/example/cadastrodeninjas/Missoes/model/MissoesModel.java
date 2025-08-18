@@ -1,4 +1,4 @@
-package org.example.cadastrodeninjas.Missoes;
+package org.example.cadastrodeninjas.Missoes.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
