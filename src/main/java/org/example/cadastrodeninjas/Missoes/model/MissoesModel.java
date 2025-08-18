@@ -1,5 +1,6 @@
 package org.example.cadastrodeninjas.Missoes.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -29,6 +30,7 @@ public class MissoesModel {
     @Column(nullable = false)
     private String Dificuldade;
     @OneToMany(mappedBy = "missoes")
+    @JsonIgnore
     private List<NinjaModel> Ninjas;
     @Column(nullable = false)
     private boolean habilitado;
