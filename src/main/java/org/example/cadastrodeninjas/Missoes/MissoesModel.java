@@ -1,11 +1,11 @@
-package org.example.cadastrodeninjas.Missoes.model;
+package org.example.cadastrodeninjas.Missoes;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.cadastrodeninjas.Ninjas.model.NinjaModel;
+import org.example.cadastrodeninjas.Ninjas.NinjaModel;
 
 import java.util.Date;
 import java.util.List;

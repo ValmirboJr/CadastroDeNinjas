@@ -1,10 +1,10 @@
-package org.example.cadastrodeninjas.Ninjas.model;
+package org.example.cadastrodeninjas.Ninjas;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.example.cadastrodeninjas.Missoes.model.MissoesModel;
+import org.example.cadastrodeninjas.Missoes.MissoesModel;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -25,7 +25,8 @@ public class NinjaModel {
     private MissoesModel missoes;
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    private long id;
 
+    private String rank;
     }
 
