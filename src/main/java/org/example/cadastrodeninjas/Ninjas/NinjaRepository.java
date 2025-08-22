@@ -1,6 +1,5 @@
-package org.example.cadastrodeninjas.Ninjas.repository;
+package org.example.cadastrodeninjas.Ninjas;
 
-import org.example.cadastrodeninjas.Ninjas.model.NinjaModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

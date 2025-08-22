@@ -1,4 +1,4 @@
-package org.example.cadastrodeninjas.Missoes.controller;
+package org.example.cadastrodeninjas.Missoes;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
