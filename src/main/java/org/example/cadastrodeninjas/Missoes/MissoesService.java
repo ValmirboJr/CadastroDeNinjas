@@ -30,26 +30,26 @@ public class MissoesService {
                 .orElse(null);
     }
     public List<MissoesDTO> listarMissoesAtivas() {
-        return missoesRepository.findByAtiva()
+        return missoesRepository.findByHabilitadoTrue()
                 .stream()
                 .map(missoesMapper::map)
                 .collect(Collectors.toList());
     }
     public List<MissoesDTO> listarMissoesDesativas() {
-        return missoesRepository.findByInativa()
+        return missoesRepository.findByHabilitadoFalse()
                 .stream()
                 .map(missoesMapper::map)
                 .collect(Collectors.toList());
     }
-    public MissoesDTO AtivarMissaoPorId(Long id) {
+    public MissoesDTO Alterar(Long id, MissoesDTO missoesDTO) {
         Optional<MissoesModel> missoesModel = missoesRepository.findById(id);
-        return missoesModel.map(missoesMapper::map)
-                .orElse(null);
-    }
-    public MissoesDTO DesativaMissoesPorId(Long id) {
-        Optional<MissoesModel> missoesModel = missoesRepository.findById(id);
-        return missoesModel.map(missoesMapper::map)
-                .orElse(null);
+       if (missoesModel.isPresent()) {
+           MissoesModel missoes = missoesMapper.map(missoesDTO);
+           missoesDTO.setId(id);
+           MissoesModel mis = missoesRepository.save(missoes);
+           return missoesMapper.map(mis);
+       }
+      return null;
     }
     public MissoesDTO CriarMissoes(MissoesDTO missoesDTO) {
         MissoesModel missoesModel = missoesMapper.map(missoesDTO);
