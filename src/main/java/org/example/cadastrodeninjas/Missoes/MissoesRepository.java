@@ -10,6 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface MissoesRepository extends JpaRepository<MissoesModel, Long> {
-    List<MissoesModel> findByAtiva();
-    List<MissoesModel> findByInativa();
+    List<MissoesModel> findByHabilitadoTrue();
+    List<MissoesModel> findByHabilitadoFalse();
 }
